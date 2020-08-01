@@ -18,3 +18,5 @@
 .leaflet-control-zoom-out {
     margin-top: 20px;
 }
+body { margin: 0; }
+#map { height: 100%; }

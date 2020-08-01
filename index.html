@@ -2,21 +2,16 @@
 <head>
 <title>Google map TileLayer with grayscale and Nextbike stations in Lviv</title>
 <link rel="stylesheet" href="./leaflet.css" />
-<!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" /> -->
 <link rel="stylesheet" href="./style.css">
 <!--[if lte IE 8]>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
 <![endif]-->
 <script src="./leaflet.js"></script>
-<!-- <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script> -->
  <!-- <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing" type="text/javascript"></script>  -->
  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsrzu7kZosxUY75dn2InyYRqkyhdCto6M&callback=initMap" async defer></script> -->
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCyOEh2WrOPQOTrUtFZdknEInK6TthZxI&callback=initMap" async defer></script>
  <script src="./leaflet-google.js"></script>
-<style>
-body { margin: 0; }
-#map { height: 100%; }
-</style>
+ <script src="./vue.js"></script>
 <script>
     function initMap() {}
     function init() {
@@ -64,6 +59,9 @@ body { margin: 0; }
 </script>
 </head>
 <body onload="javascript:init();">
-<div id="map"></div>
+<div id="App">
+    <div id="map"></div>
+</div>
 </body>
+<script src="./script.js"></script>
 </html>
