@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Google map TileLayer with grayscale makeover Test</title>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+<link rel="stylesheet" href="style.css">
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+<![endif]-->
+<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+ <!-- <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing" type="text/javascript"></script>  -->
+ <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsrzu7kZosxUY75dn2InyYRqkyhdCto6M&callback=initMap" async defer></script> -->
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCyOEh2WrOPQOTrUtFZdknEInK6TthZxI&callback=initMap" async defer></script>
+ <script src="leaflet-google.js"></script>
+<style>
+body { margin: 0; }
+#map { height: 100%; }
+</style>
+<script>
+    function initMap() {}
+    function init() {
+        var map = L.map('map').setView([49.830191, 24.029058], 12);
+       
+	    var googleLayer = new L.Google('ROADMAP',{ styles:[{stylers: [{saturation: -100}]}]});
+        map.addLayer(googleLayer);
+
+        var myIcon = L.icon({
+            iconUrl: './icon.png',
+            iconSize: [30, 45],
+            iconAnchor: [15, 40],
+            popupAnchor: [-3, -26],
+            // shadowUrl: 'my-icon-shadow.png',
+            // shadowSize: [68, 95],
+            // shadowAnchor: [22, 94]
+        });
+
+        // var popup = marker.bindPopup('<b>Hello world!</b><br />I am a popup.');
+        // map.addLayer(marker);
+        const market = L.marker([49.841630, 24.031112], {icon: myIcon, bounceOnAdd: true, bounceOnAddOptions: {duration: 500, height: 250, loop: 1}},).addTo(map);
+        const velykoho = L.marker([49.807990, 24.018826], {icon: myIcon}).addTo(map);
+        const lnu = L.marker([49.840022, 24.021787], {icon: myIcon}).addTo(map);
+        const podatkova = L.marker([49.815946, 24.020231], {icon: myIcon}).addTo(map);
+        const tehnopark = L.marker([49.832207, 23.996245], {icon: myIcon}).addTo(map);
+        const forum = L.marker([49.849043, 24.024333], {icon: myIcon}).addTo(map);
+        const chornovola = L.marker([49.855915, 24.021796], {icon: myIcon}).addTo(map);
+        const chornovola67 = L.marker([49.861971, 24.018453], {icon: myIcon}).addTo(map);
+        const spartak = L.marker([49.869441, 24.023458], {icon: myIcon}).addTo(map);
+        const promyslova = L.marker([49.861208, 24.043926], {icon: myIcon}).addTo(map);
+        const kingcross = L.marker([49.773979, 24.012267], {icon: myIcon}).addTo(map);
+        const avtovokzal = L.marker([49.787339, 24.017203], {icon: myIcon}).addTo(map);
+        const bodnarivka = L.marker([49.802360, 24.018847], {icon: myIcon}).addTo(map);
+        const santabarbara = L.marker([49.784667, 24.059461], {icon: myIcon}).addTo(map);
+        const dovzhenko = L.marker([49.795322, 24.056787], {icon: myIcon}).addTo(map);
+        const shuvar = L.marker([49.799052, 24.049325], {icon: myIcon}).addTo(map);
+        const uhorska = L.marker([49.810518, 24.045940], {icon: myIcon}).addTo(map);
+        const petrushevych = L.marker([49.833126, 24.035847], {icon: myIcon}).addTo(map);
+        const akvapark = L.marker([49.806567, 23.998339], {icon: myIcon}).addTo(map);
+        const velykoho113 = L.marker([49.811263, 23.990507], {icon: myIcon}).addTo(map);
+        const pivdenny = L.marker([49.813129, 23.976930], {icon: myIcon}).addTo(map);
+        const sadova = L.marker([49.822168, 23.985631], {icon: myIcon}).addTo(map);
+        const lyubinska = L.marker([49.823848, 23.977482], {icon: myIcon}).addTo(map);
+    }
+</script>
+</head>
+<body onload="javascript:init();">
+<div id="map"></div>
+</body>
+</html>
