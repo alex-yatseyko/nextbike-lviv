@@ -3,3 +3,18 @@
 .leaflet-google-layer {
     z-index: 0 !important;
 }
+.leaflet-bar-part {
+    background: #004699;
+    color: white !important;
+    border-radius: 50%;
+    transform: scale(1.5);
+    font-weight: 100;
+}
+.leaflet-bar {
+    background: transparent;
+    box-shadow: none !important;
+    border: none;
+}
+.leaflet-control-zoom-out {
+    margin-top: 20px;
+}
